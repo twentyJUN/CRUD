@@ -1,7 +1,7 @@
-user = ['박진우', '이영준']
+user = []
 
 def print_menu():
-    print("[0] 프로그램 종료\n [1] 회원 정보 입력\n [2] 회원 정보 검색\n [3] 회원 정보 수정\n [4]회원 정보 삭제\n")
+    print("[0] 프로그램 종료\n[1] 회원 정보 입력\n[2] 회원 정보 검색\n[3] 회원 정보 수정\n[4] 회원 정보 삭제\n[5] 회원 목록 보기\n")
 
 print("CRUD 쇼핑몰입니다\n");
 
@@ -35,6 +35,14 @@ while True:
 
     elif menu == 4:
         print("[4] 회원 정보 삭제를 선택하셨습니다\n")
+        for index, value in enumerate(user):
+            print(index, value)
+        number = int(input("삭제할 회원 번호를 선택해주세요 : "))
+        del user[number]
+        print("삭제 되었습니다")
+
+    elif menu == 5:
+        print(user)
 
     else:
         print("잘못된 번호를 입력하셨습니다")
